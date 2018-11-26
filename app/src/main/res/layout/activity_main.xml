@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etid"
+            android:layout_width="291dp"
+            android:layout_height="50dp"
+            android:hint="รหัสนักศึกษา"
+            android:maxEms="20"
+            />
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="289dp"
+            android:layout_height="50dp"
+            android:hint="ชื่อ"
+            android:maxEms="200"
+            />
+
+        <EditText
+            android:id="@+id/ettel"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:hint="เบอร์โทร"
+            android:maxEms="20"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etemail"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:hint="อีเมลล์"
+                android:maxEms="250"
+                />
+
+            <Button
+                android:id="@+id/btadd"
+                android:layout_width="77dp"
+                android:layout_height="50dp"
+                android:text="Save" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linear"
+        tools:listitem="@layout/show_student">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
